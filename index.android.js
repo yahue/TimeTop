@@ -13,11 +13,24 @@ import {
 } from 'react-native';
 
 export default class TimeTop extends Component {
+  
   render() {
+
+
+var hell=function(){
+
+  a=1;
+  b=1;
+  b++;
+  return a+b;
+}
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!sdf
+        </Text>
+        <Text>
+        {hell()}
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
