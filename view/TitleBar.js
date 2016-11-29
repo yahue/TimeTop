@@ -9,8 +9,6 @@ import {
   Platform,
 } from 'react-native'
 
-import Util from './../base/Util';
-
 export default class TitleBar extends Component{
 
    render(){

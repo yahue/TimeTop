@@ -15,7 +15,7 @@ import {
 
 
 import ScrollableTabView,{ ScrollableTabBar } from 'react-native-scrollable-tab-view';
-
+import NewsBaner from "NewsBaner"
 /**
 音乐
 **/
@@ -34,7 +34,7 @@ export default class Home extends Component{
     return(
       <View style={styles.container}>
       <StatusBar
-       backgroundColor='#1a191f'
+       backgroundColor='#FF0000'
        barStyle='light-content'
        animated={true}
        hidden={false}
@@ -44,17 +44,17 @@ export default class Home extends Component{
       initialPage={0}
       scrollWithoutAnimation={true}
       renderTabBar={()=><ScrollableTabBar
-                    underlineColor='#ce3d3a'
+                    underlineColor='#fff'
                     activeTextColor='#fff'
                     inactiveTextColor='rgba(255, 255, 255, 0.7)'
-                    underlineHeight={0}
+                    underlineStyle={{backgroundColor: '#fff',height:1}}
                     textStyle={{ fontSize: 15 }}
-                    tabStyle={{ paddingBottom: 0 }}
-                    backgroundColor='#ce3d3a'
+                    backgroundColor='#F00'
                     tabStyle={{paddingLeft:12,paddingRight:12}}
                    />}
       >
-     <View tabLabel='推荐' style={styles.itemLayout}><Text >推荐板块</Text></View>
+     <View tabLabel='推荐' style={styles.itemLayout}>
+     <NewsBaner></NewsBaner><Text >推荐板块</Text></View>
      <View tabLabel='头条号'  style={styles.itemLayout}><Text>头条号板块</Text></View>
      <View tabLabel='热点' style={styles.itemLayout}><Text >热点板块</Text></View>
      <View tabLabel='视频'  style={styles.itemLayout}><Text >视频板块</Text></View>
@@ -73,7 +73,11 @@ export default class Home extends Component{
 const styles=StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#000000',
   },
-  itemLayout:{flex:1,alignItems:'center',justifyContent:'center'}
+  itemLayout:{
+    flex:1,alignItems:'center',
+    justifyContent:'center',
+    backgroundColor: '#00FF00'
+  }
 });

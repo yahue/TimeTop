@@ -81,7 +81,7 @@ import React, { Component } from 'react';
          selected={this.state.selectedTab===tabName}
          selectedTitleStyle={{color:'#f85959'}}
          onPress={()=>this.onPress(tabName)}
-         renderBadge={()=>isBadge?<View style={styles.badgeView}><Text style={styles.badgeText}>15</Text></View>:null}
+         renderBadge={()=>isBadge?<View style={styles.badgeView}><Text style={styles.badgeText}>66</Text></View>:null}
         >
         {
           tabName=='Home'?<Home/>:
