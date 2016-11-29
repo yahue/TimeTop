@@ -1,11 +1,13 @@
 'use strict';
-import React, {
-    Component,
+
+import React, { Component } from 'react';
+import  {
     View,
     Text,
     Image,
     StyleSheet,
     ScrollView,
+    Dimensions,
     RefreshControl
 } from 'react-native';
 import ViewPager from 'react-native-viewpager';
@@ -41,7 +43,14 @@ export default class NewsBaner extends Component {
 
     render() {
         return (
-            <View>
+            <View style={{  flex: 1,  
+        flexDirection: 'row',  
+        alignItems: 'flex-start',  
+        paddingTop:5,  
+        paddingLeft:5,  
+        backgroundColor:'#999999',  
+        paddingRight:5,  
+        paddingBottom:5, }}>
                 <ViewPager
                     style={{height:130}}
                     dataSource={this.state.dataSource}
@@ -55,6 +64,7 @@ export default class NewsBaner extends Component {
 
 const styles = StyleSheet.create({
     page: {
+        width:Dimensions.get('window').width, // 此处修复宽度不一样问题
         flex: 1,
         height: 130,
         resizeMode: 'stretch'

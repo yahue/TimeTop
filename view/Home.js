@@ -15,7 +15,8 @@ import {
 
 
 import ScrollableTabView,{ ScrollableTabBar } from 'react-native-scrollable-tab-view';
-import NewsBaner from "NewsBaner"
+import NewsBaner from "./NewsBaner"
+import RefreshControlExample from "./pullrefresh"
 /**
 音乐
 **/
@@ -53,9 +54,10 @@ export default class Home extends Component{
                     tabStyle={{paddingLeft:12,paddingRight:12}}
                    />}
       >
-     <View tabLabel='推荐' style={styles.itemLayout}>
-     <NewsBaner></NewsBaner><Text >推荐板块</Text></View>
-     <View tabLabel='头条号'  style={styles.itemLayout}><Text>头条号板块</Text></View>
+     <NewsBaner tabLabel='推荐' ba style={styles.test}>
+    
+     </NewsBaner>
+     <RefreshControlExample tabLabel='头条号'  style={styles.itemLayout}><Text>头条号板块</Text></RefreshControlExample>
      <View tabLabel='热点' style={styles.itemLayout}><Text >热点板块</Text></View>
      <View tabLabel='视频'  style={styles.itemLayout}><Text >视频板块</Text></View>
      <View tabLabel='上海'  style={styles.itemLayout}><Text >上海板块</Text></View>
@@ -74,6 +76,10 @@ const styles=StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000000',
+  },
+  test:{
+height:300,
+backgroundColor:"#fff"
   },
   itemLayout:{
     flex:1,alignItems:'center',
