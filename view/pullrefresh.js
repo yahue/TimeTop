@@ -103,7 +103,7 @@ class RefreshControlExample extends React.Component {
         isRefreshing: false,
         rowData: rowData,
       });
-    }, 2000);
+    }, 5000);
   };
 }
 

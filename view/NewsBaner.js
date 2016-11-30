@@ -11,7 +11,6 @@ import  {
     RefreshControl
 } from 'react-native';
 import ViewPager from 'react-native-viewpager';
-
 const BANNER_IMGS = [
     require('../images/banner/1.jpg'),
     require('../images/banner/2.jpg'),
@@ -29,8 +28,12 @@ export default class NewsBaner extends Component {
         });
         // 实际的DataSources存放在state中
         this.state = {
-            dataSource: dataSource.cloneWithPages(BANNER_IMGS)
-        }
+            dataSource: dataSource.cloneWithPages(BANNER_IMGS),
+            isRefreshing: false,
+            loaded: 0,
+            rowData: Array.from(new Array(20)).map(
+            (val, i) => ({text: 'Initial row ' + i, clicks: 0})),
+            }
     }
 
     _renderPage(data, pageID) {
@@ -40,24 +43,56 @@ export default class NewsBaner extends Component {
                 style={styles.page}/>
         );
     }
+    _onRefresh =()=>{
+      this.setState({isRefreshing: true});
+    setTimeout(() => {
+      // prepend 10 items
+      const rowData = Array.from(new Array(10))
+      .map((val, i) => ({
+        text: 'Loaded row ' + (+this.state.loaded + i),
+        clicks: 0,
+      }))
+      .concat(this.state.rowData);
+
+      this.setState({
+        loaded: this.state.loaded + 10,
+        isRefreshing: false,
+        rowData: rowData,
+      });
+    }, 5000);
+    }
 
     render() {
+
+        const rows = this.state.rowData.map((row, ii) => {
+      return <View style={{ borderColor: 'grey',
+    borderWidth: 1,
+    padding: 20,
+    backgroundColor: '#3a5795',
+    margin: 5,}}  ><Text>{row.text}</Text></View>;
+    });
+
         return (
-            <View style={{  flex: 1,  
-        flexDirection: 'row',  
-        alignItems: 'flex-start',  
-        paddingTop:5,  
-        paddingLeft:5,  
-        backgroundColor:'#999999',  
-        paddingRight:5,  
-        paddingBottom:5, }}>
+            <ScrollView style={{  flex: 1 }}
+                refreshControl={
+                <RefreshControl
+                    refreshing={this.state.isRefreshing}
+                    onRefresh={this._onRefresh}
+                    tintColor="#ff0000"
+                    title="Loading..."
+                    titleColor="#00ff00"
+                    colors={['#ff0000', '#00ff00', '#0000ff']}
+                    progressBackgroundColor="#ffff00"
+                />}
+                >   
                 <ViewPager
                     style={{height:130}}
                     dataSource={this.state.dataSource}
                     renderPage={this._renderPage}
                     isLoop={true}
                     autoPlay={true}/>
-            </View>
+                    {rows}
+            </ScrollView>
         )
     }
 }

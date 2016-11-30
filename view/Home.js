@@ -57,7 +57,7 @@ export default class Home extends Component{
      <NewsBaner tabLabel='推荐' ba style={styles.test}>
     
      </NewsBaner>
-     <RefreshControlExample tabLabel='头条号'  style={styles.itemLayout}><Text>头条号板块</Text></RefreshControlExample>
+     <RefreshControlExample tabLabel='头条号'  style={styles.itemLayout}></RefreshControlExample>
      <View tabLabel='热点' style={styles.itemLayout}><Text >热点板块</Text></View>
      <View tabLabel='视频'  style={styles.itemLayout}><Text >视频板块</Text></View>
      <View tabLabel='上海'  style={styles.itemLayout}><Text >上海板块</Text></View>
