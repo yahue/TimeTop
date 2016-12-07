@@ -12,10 +12,10 @@ import  {
 } from 'react-native';
 import ViewPager from 'react-native-viewpager';
 const BANNER_IMGS = [
-    require('../images/banner/1.jpg'),
-    require('../images/banner/2.jpg'),
-    require('../images/banner/3.jpg'),
-    require('../images/banner/4.jpg')
+    require('../assets/images/banner/1.jpg'),
+    require('../assets/images/banner/2.jpg'),
+    require('../assets/images/banner/3.jpg'),
+    require('../assets/images/banner/4.jpg')
 ];
 
 export default class NewsBaner extends Component {
