@@ -16,6 +16,7 @@ import {
 
 import ScrollableTabView,{ ScrollableTabBar } from 'react-native-scrollable-tab-view';
 import NewsBaner from "./NewsBaner"
+
 import RefreshControlExample from "./pullrefresh"
 /**
 音乐

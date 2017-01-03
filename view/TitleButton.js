@@ -19,10 +19,10 @@ export default class TitleButton extends Component{
      return(
        <View style={[styles.titleBar,this.props.style]}>
         <TouchableOpacity style={{flex:1}} onPress={()=>alert('add')}>
-        <Image resizeMode='contain' style={styles.search} source={require('../images/add_channel_titlbar.png')}/>
+        <Image resizeMode='contain' style={styles.search} source={require('../assets/images/add_channel_titlbar.png')}/>
         </TouchableOpacity>
         <TouchableOpacity style={{flex:1}} onPress={()=>alert('search')}>
-        <Image style={[styles.search,{width:30,height:30,}]} source={require('../images/white_search_titlebar.png')}/>
+        <Image style={[styles.search,{width:30,height:30,}]} source={require('../assets/images/white_search_titlebar.png')}/>
         </TouchableOpacity>
        </View>
      );
