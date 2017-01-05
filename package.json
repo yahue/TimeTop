@@ -19,6 +19,7 @@
     "react-native-viewpager": "^0.2.13",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
+    "redux-actions": "^1.2.0",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
