@@ -4,16 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "android": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js run-android",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "prebuild": "rm -rf build",
+    "build": "tsc"
   },
   "dependencies": {
-    "@types/node": "0.0.2",
-    "@types/react-native": "^0.37.1",
-    "@types/react-redux": "^4.4.35",
-    "@types/redux": "^3.6.0",
-    "@types/redux-thunk": "^2.1.32",
     "react": "~15.3.1",
-    "react-native": "0.37.0",
+    "react-native": "0.37.9",
     "react-native-scrollable-tab-view": "^0.7.0",
     "react-native-tab-navigator": "^0.3.3",
     "react-native-viewpager": "^0.2.13",
@@ -23,6 +22,12 @@
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "@types/react": "^15.0.0",
+    "@types/react-native": "^0.37.7",
+    "@types/react-redux": "^4.4.35",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^1.2.2",
+    "@types/redux-thunk": "^2.1.32",
     "babel-jest": "17.0.2",
     "babel-preset-react-native": "1.9.0",
     "jest": "17.0.3",
