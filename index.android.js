@@ -1,6 +1,5 @@
-import { AppRegistry } from 'react-native';
+'use strict';
 
-import App from './app';
-//  import App from './reduxdemo/Counter/containers/app'
-//import App from './reduxdemo/Counters';
+import { AppRegistry } from 'react-native';
+import App from './build';
 AppRegistry.registerComponent('TimeTop', () => App);
