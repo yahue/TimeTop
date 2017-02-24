@@ -30,6 +30,10 @@ export class Counter extends React.Component<Props, void> {
 
   render(): JSX.Element|any {
     return (
+
+       
+       
+
       <View style={this.styles.container}>
         <Text style={this.styles.count}>{this.props.count}</Text>
         <Button title="+1" onPress={this.handleAddButtonPress} />

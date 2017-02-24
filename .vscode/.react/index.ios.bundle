@@ -1599,8 +1599,8 @@ return Array.from(arr);
 __d(/* TimeTop/index.ios.js */function(global, require, module, exports) {'use strict';
 
 var _reactNative=require(12            ); // 12 = react-native
-var _build=require(403      );var _build2=babelHelpers.interopRequireDefault(_build); // 403 = ./build
-_reactNative.AppRegistry.registerComponent('TimeTop',function(){return _build2.default;});
+var _index=require(403                );var _index2=babelHelpers.interopRequireDefault(_index); // 403 = ./build/index.ios
+_reactNative.AppRegistry.registerComponent('TimeTop',function(){return _index2.default;});
 }, 0, null, "TimeTop/index.ios.js");
 __d(/* react-native/Libraries/react-native/react-native.js */function(global, require, module, exports) {
 
@@ -75266,6 +75266,9 @@ return _this.props.onResetPress();
 };return _this;
 }babelHelpers.createClass(Counter,[{key:'render',value:function render()
 {
+var i=1;
+i++;
+var b=i;
 return React.createElement(_reactNative.View,{style:this.styles.container},
 React.createElement(_reactNative.Text,{style:this.styles.count},this.props.count),
 React.createElement(_reactNative.Button,{title:"+1",onPress:this.handleAddButtonPress}),

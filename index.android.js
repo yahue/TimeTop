@@ -1,5 +1,5 @@
 'use strict';
 
 import { AppRegistry } from 'react-native';
-import App from './build';
+import App from "./build/index.android"
 AppRegistry.registerComponent('TimeTop', () => App);
