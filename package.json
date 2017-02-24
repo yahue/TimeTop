@@ -11,6 +11,7 @@
     "build": "tsc"
   },
   "dependencies": {
+    "immutable": "^3.8.1",
     "react": "~15.4.0",
     "react-native": "0.41.2",
     "react-native-scrollable-tab-view": "^0.7.0",
