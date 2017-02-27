@@ -70225,6 +70225,9 @@ return++count;
 });
 }
 case ActionTypes.COUNTER_RESET_COUNT:{
+var i=1;
+i++;
+var j=i;
 return state.set('count',0);
 }
 default:{
@@ -75223,6 +75226,9 @@ var _Counter=require(440                    ); // 440 = ../components/Counter
 var _counter=require(441                 );var // 441 = ../actions/counter
 Container=function(_React$Component){babelHelpers.inherits(Container,_React$Component);function Container(){babelHelpers.classCallCheck(this,Container);return babelHelpers.possibleConstructorReturn(this,(Container.__proto__||Object.getPrototypeOf(Container)).apply(this,arguments));}babelHelpers.createClass(Container,[{key:'render',value:function render()
 {
+var i=1;
+i++;
+var j=i;
 return React.createElement(_Counter.Counter,{count:this.props.count,onAddPress:this.props.onAddPress,onResetPress:this.props.onResetPress});
 }}]);return Container;}(React.Component);
 
@@ -75266,9 +75272,6 @@ return _this.props.onResetPress();
 };return _this;
 }babelHelpers.createClass(Counter,[{key:'render',value:function render()
 {
-var i=1;
-i++;
-var b=i;
 return React.createElement(_reactNative.View,{style:this.styles.container},
 React.createElement(_reactNative.Text,{style:this.styles.count},this.props.count),
 React.createElement(_reactNative.Button,{title:"+1",onPress:this.handleAddButtonPress}),

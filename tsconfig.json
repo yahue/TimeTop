@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "target": "es2015",
-        "module": "es2015",
+        "target": "es6",
+        "module": "es6",
         "jsx": "react",
         "outDir": "build",
         "rootDir": "src",
@@ -12,34 +12,33 @@
         "allowJs": true,
         "sourceMap": true,
         "moduleResolution": "node"
-
-        // // 基本配置
-        // "module": "es6",
-        // "jsx": "react",
-        // "moduleResolution": "node",
-        // "allowJs": true,
-        // "experimentalDecorators": true, 
-        // "rootDir": "src",
-        // //错误检查
-        // "allowSyntheticDefaultImports": true,
-        // "noImplicitAny": true,
-        // "noImplicitThis": true,
-        // "strictNullChecks": true,
-        // "noFallthroughCasesInSwitch": true,
-        // "noImplicitReturns": true,
-        // "noUnusedLocals": true,
-        // "noUnusedParameters": true,
-        // "alwaysStrict": true,
-        // //输出配置
-        // "outDir": "build",
-        // "target": "es6",
-        // "pretty": true,
-        // "noEmitOnError": true,
-        // "removeComments": true,
-        // "importHelpers": true,
-        // "inlineSources": false,
-        // "sourceMap": true,
-        // "preserveConstEnums": true
+            // // 基本配置
+            // "module": "es6",
+            // "jsx": "react",
+            // "moduleResolution": "node",
+            // "allowJs": true,
+            // "experimentalDecorators": true, 
+            // "rootDir": "src",
+            // //错误检查
+            // "allowSyntheticDefaultImports": true,
+            // "noImplicitAny": true,
+            // "noImplicitThis": true,
+            // "strictNullChecks": true,
+            // "noFallthroughCasesInSwitch": true,
+            // "noImplicitReturns": true,
+            // "noUnusedLocals": true,
+            // "noUnusedParameters": true,
+            // "alwaysStrict": true,
+            // //输出配置
+            // "outDir": "build",
+            // "target": "es6",
+            // "pretty": true,
+            // "noEmitOnError": true,
+            // "removeComments": true,
+            // "importHelpers": true,
+            // "inlineSources": false,
+            // "sourceMap": true,
+            // "preserveConstEnums": true
 
     },
     "filesGlob": [

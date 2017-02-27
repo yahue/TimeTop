@@ -14,6 +14,9 @@ export const counterReducer = (state = initialState, action: any) => {
       });
     }
     case ActionTypes.COUNTER_RESET_COUNT: {
+      var i=1
+      i++
+      var j=i
       return state.set('count', 0);
     }
     default: {

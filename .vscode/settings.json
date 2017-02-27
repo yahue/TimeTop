@@ -1,3 +1,6 @@
 {
-    "vsicons.presets.angular": false
+    "sourceMaps": true,
+    "vsicons.presets.angular": false,
+    "debug.allowBreakpointsEverywhere": true
+
 }

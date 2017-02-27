@@ -14,6 +14,9 @@ interface Props {
 class Container extends React.Component<Props, void> {
 
   render(): JSX.Element {
+    var i=1
+    i++
+    var j=i
     return (
       <Counter
         count={this.props.count}

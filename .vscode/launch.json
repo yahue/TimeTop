@@ -19,9 +19,10 @@
             "request": "launch",
             "platform": "ios",
             "target": "iPhone 5s",
-            "internalDebuggerPort": 9090,
+            // "internalDebuggerPort": 9090,
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/.vscode/.react"
+
         },
         {
             "name": "Attach to packager",
