@@ -14,6 +14,12 @@ import {
 
 export default class TimeTop extends Component {
   render() {
+    var a =1
+    a=2
+    a++
+    a++
+    console.log(a)
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
