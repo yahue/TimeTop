@@ -9,3 +9,6 @@ UI
         https://github.com/jpush/jpush-react-native
 地图
     百度
+    https://github.com/lovebing/react-native-baidu-map
+    高德
+    https://github.com/dwd-fe/react-native-amap
